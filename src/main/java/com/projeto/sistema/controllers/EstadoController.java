@@ -29,7 +29,7 @@ public class EstadoController {
 	
 	@GetMapping("/listarEstado")
 	public ModelAndView listar() {
-		ModelAndView mv = new ModelAndView("/administratio/estados/lista");
+		ModelAndView mv = new ModelAndView("/administrativo/estados/lista");
 		mv.addObject("listaEstados", estadoRepository.findAll());
 		return mv;
 	}
@@ -43,9 +43,10 @@ public class EstadoController {
 	
 	@GetMapping("/removerEstado/{id}")
 	public ModelAndView remover(@PathVariable("id") Long id) {
-		Optional<Estado> estado = estadoRepository.findById(id);
-		estadoRepository.delete(estado.get());
-		return listar();
+	    estadoRepository.findById(id)
+	        .ifPresent(estadoRepository::delete);
+
+	    return listar();
 	}
 	
 	
