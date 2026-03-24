@@ -5,28 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	  
   </head>
   <body>
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid" style="color: white; background-color: rgb(57, 205, 54); margin-top: -8px; padding-top: 5px; padding-bottom: 5px;">
     <img src="https://png.pngtree.com/png-vector/20220113/ourmid/pngtree-design-concept-of-a-winged-letter-w-logo-vector-png-image_34978768.png" alt="Bootstrap" width="30" height="24">
-    <a class="navbar-brand" href="#">Winners</a>
+    <a class="navbar-brand" href="#" style="color: #fff;">Winners</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="#" style="color: #fff;">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#" style="color: #fff;">Link</a>
         </li>  
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+        <button class="btn btn-outline-success" type="submit" style="color: #fff;">Pesquisar</button>
       </form>
     </div>
   </div>
@@ -37,9 +39,33 @@
       <div class="row">
           <div class="col-md-3" style="margin-top: 10px;">
             <ul class="list-group">
-              <li class="list-group-item" style="color: white; background-color: rgb(57, 205, 54);">Menu</li>
-              <a href="/cadastroEstado" style="text-decoration: none;"><li class="list-group-item" style="color: rgb(57, 205, 54);">Cadastro Estado</li></a>
-              <a href="/listarEstado" style="text-decoration: none;"><li class="list-group-item" style="color: rgb(57, 205, 54);">Lista Estado</li></a>
+              <li class="list-group-item" style="color: white; background-color: rgb(57, 205, 54);"><i class="fa-solid fa-bars" style="color: rgb(0, 0, 0);"></i> Funcionalidades</li>
+           	  <a href="/cadastroVenda" style="text-decoration: none;" ><li class="list-group-item" style="color: rgb(57, 205, 54);">Efetuar Venda</li></a> 
+           	  <a href="/listarVendas" style="text-decoration: none;" ><li class="list-group-item" style="color: rgb(57, 205, 54);">Listar Vendas</li></a> 
+           	  <a href="/cadastroEntrada" style="text-decoration: none;"><li class="list-group-item" style="color: rgb(57, 205, 54);">Efetuar Entrada de Produto</li></a> 
+           	  <a href="/listarEntradas" style="text-decoration: none;"><li class="list-group-item" style="color: rgb(57, 205, 54);">Listar Entradas de Produtos</li></a>              
+           	               
+           	               
+           
+              
+              <li class="list-group-item" style="color: white; background-color: rgb(57, 205, 54);"><i class="fa-solid fa-bars" style="color: rgb(0, 0, 0);"></i>Cadastros</li>
+			  <a href="/cadastroEstado" style="text-decoration: none;"><li class="list-group-item" style="color: rgb(57, 205, 54);">Cadastro Estado</li></a>
+			  <a href="/cadastroCidade" style="text-decoration: none;"><li class="list-group-item" style="color: rgb(57, 205, 54);">Cadastro Cidade</li></a>   
+			  <a href="/cadastroFuncionario" style="text-decoration: none;"><li class="list-group-item" style="color: rgb(57, 205, 54);">Cadastro Funcionario</li></a>   
+			  <a href="/cadastroCliente" style="text-decoration: none;"><li class="list-group-item" style="color: rgb(57, 205, 54);">Cadastro Cliente</li></a>   
+			  <a href="/cadastroFornecedor" style="text-decoration: none;"><li class="list-group-item" style="color: rgb(57, 205, 54);">Cadastro Fornecedor</li></a>
+			  <a href="/cadastroProduto" style="text-decoration: none;"><li class="list-group-item" style="color: rgb(57, 205, 54);">Cadastro Produto</li></a>   
+              
+              <li class="list-group-item" style="color: white; background-color: rgb(57, 205, 54);"><i class="fa-solid fa-bars" style="color: rgb(0, 0, 0);"></i>Listas</li>
+              
+              
+            
+              <a href="/listarEstado" style="text-decoration: none;"><li class="list-group-item" style="color: rgb(57, 205, 54);">Listar Estado</li></a>
+              <a href="/listarCidade" style="text-decoration: none;"><li class="list-group-item" style="color: rgb(57, 205, 54);">Listar Cidade</li></a>   
+			  <a href="/listarFuncionario" style="text-decoration: none;"><li class="list-group-item" style="color: rgb(57, 205, 54);">Listar Funcionario</li></a>   
+			  <a href="/listarCliente" style="text-decoration: none;"><li class="list-group-item" style="color: rgb(57, 205, 54);">Listar Cliente</li></a>   
+			  <a href="/listarFornecedor" style="text-decoration: none;"><li class="list-group-item" style="color: rgb(57, 205, 54);">Listar Fornecedor</li></a>
+			  <a href="/listarProduto" style="text-decoration: none;"><li class="list-group-item" style="color: rgb(57, 205, 54);">Listar Produto</li></a>   
             </ul>
           </div>
           <div class="col-md-9">
