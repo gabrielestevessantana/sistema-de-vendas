@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lista de Fornecedors</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.7/css/dataTables.dataTables.css" />
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid" style="background-color: rgb(57, 205, 54);">
+        <a class="navbar-brand text-white" href="#">Winners</a>
+    </div>
+</nav>
+
+<div class="container-fluid">
+
+    <table class="table" id="tabela">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>CNPJ</th>
+                <th>Telefone</th>
+                <th>Endereco</th>
+                <th>Numero</th>
+                <th>Bairro</th>
+                <th>Email</th>
+                <th>Cidade</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each="fornecedor : ${listaFornecedors}">
+                <td th:text="${fornecedor.id}"></td>
+                <td th:text="${fornecedor.nome}"></td>
+                <td th:text="${fornecedor.cnpj}"></td>
+                <td th:text="${fornecedor.telefone}"></td>
+                <td th:text="${fornecedor.endereco}"></td>
+                <td th:text="${fornecedor.numero}"></td>
+                <td th:text="${fornecedor.bairro}"></td>
+                <td th:text="${fornecedor.email}"></td>
+                <td th:text="${fornecedor.cidade.nome}"></td>
+                <td>
+                    <a th:href="@{/editarFornecedor/{id}(id=${fornecedor.id})}">
+                        <i class="fa-solid fa-pen-to-square text-success"></i>
+                    </a>
+                    |
+                    <a th:href="@{/removerFornecedor/{id}(id=${fornecedor.id})}">
+                        <i class="fa-solid fa-trash text-danger"></i>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a class="btn btn-danger" href="/administrativo">Voltar</a>
+    <a class="btn btn-primary" href="/cadastroFornecedor">Cadastrar</a>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+<script src="https://cdn.datatables.net/2.3.7/js/dataTables.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#tabela').DataTable({
+            language: {
+                url: 'https://cdn.datatables.net/plug-ins/2.3.7/i18n/pt-BR.json'
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

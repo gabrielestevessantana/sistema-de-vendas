@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 
 @Entity
-public class Funcionario implements Serializable {
+public class Cliente implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -24,7 +24,6 @@ public class Funcionario implements Serializable {
     private String numero;
     private String bairro;
     private String email;
-    private String funcao;
 
     @ManyToOne
     private Cidade cidade;
@@ -92,15 +91,7 @@ public class Funcionario implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    public String getFuncao() {
-        return funcao;
-    }
-
-    public void setFuncao(String funcao) {
-        this.funcao = funcao;
-    }
-
+    
     public Cidade getCidade() {
         return cidade;
     }
